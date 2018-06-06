@@ -1,0 +1,402 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZSplitApp_Screen.controller.Detail1"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+	<Page title="Work Execution Fiori App" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Text text="Work Execution Fiori App "/>
+				</contentLeft>
+				<contentRight>
+					<Button press="onNavTo" text="Timesheet Review" type="Emphasized" ></Button>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="Oper.Details">
+					<!--<l:Grid defaultSpan="L12 M12 S12" width="auto" id="Form1">-->
+					<!--<l:content>-->
+					<!--	<f:Form id="FormChange354" editable="true">-->
+					<!--		<f:layout>-->
+					<!--			<f:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1"/>-->
+					<!--		</f:layout>-->
+					<!--		<f:formContainers>-->
+					<!--			<f:FormContainer>-->
+					<!--				<f:formElements>-->
+					<!--					<f:FormElement label="Order number">-->
+					<!--						<f:fields>-->
+					<!--							<Input></Input>-->
+					<!--						</f:fields>-->
+					<!--</f:FormElement>-->
+					<!--<f:FormElement label="Operation No" class="fontColor">-->
+					<!--	<f:fields>-->
+					<!--		<Input></Input>-->
+					<!--	</f:fields>-->
+					<!--</f:FormElement>-->
+					<!--<f:FormElement label="Order type" class="fontColor">-->
+					<!--	<f:fields>-->
+					<!--		<Input></Input>-->
+					<!--	</f:fields>-->
+					<!--</f:FormElement>-->
+					<!--<f:FormElement label="Order operation text" class="fontColor">-->
+					<!--	<f:fields>-->
+					<!--		<Input></Input>-->
+					<!--	</f:fields>-->
+					<!--</f:FormElement>-->
+					<!--<f:FormElement label="Plant" class="fontColor">-->
+					<!--	<f:fields>-->
+					<!--		<Input></Input>-->
+					<!--	</f:fields>-->
+					<!--</f:FormElement>-->
+					<!--<f:FormElement label="Appointment start date" class="fontColor">-->
+					<!--	<layoutData>-->
+					<!--		<l:GridData span="L3 M3 S3" linebreakL="true" linebreakM="true" linebreakS="true"/>-->
+					<!--	</layoutData>-->
+					<!--	<f:fields>-->
+					<!--			<DatePicker id="DP3" valueFormat="dd-MM-yyyy" displayFormat="medium" change="handleChange" class="sapUiSmallMarginBottom">-->
+					<!--				<layoutData>-->
+					<!--					<l:GridData span="L2 M4 S4"/>-->
+					<!--				</layoutData>-->
+					<!--			</DatePicker>-->
+					<!--			<TimePicker id="TP3" value="" valueFormat="HH:mm" displayFormat="HH:mm" change="handleChange">-->
+					<!--				<layoutData>-->
+					<!--					<l:GridData span="XL1 L2 M4 S4"/>-->
+					<!--				</layoutData>-->
+					<!--			</TimePicker>-->
+					<!--	</f:fields>-->
+					<!--</f:FormElement>-->
+					<!--				</f:formElements>-->
+					<!--			</f:FormContainer>-->
+					<!--		</f:formContainers>-->
+					<!--	</f:Form>-->
+					<!--</l:content>-->
+					<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+						<l:content>
+							<Label text="Order number"/>
+							<Input id="name11" value="{/?orderData/Aufnr}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Label text="Operation No "/>
+							<Input id="name12" value="{/?orderData/Vornr}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Label text="Order type" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+								</Label>
+							<Input id="name13" value="{/?orderData/Auart}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Order type" wrapping="true"/>
+							<Label text="Order operation text" wrapping="true">
+								<layoutData>
+									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+								</Label>
+							<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
+								<layoutData>
+									<l:GridData span="L5 M5 S5"/>
+								</layoutData>
+							</Input>
+							<Label text="">
+							<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+								</Label>
+							<Label text="Plant">
+							<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+								</Label>
+							<Input id="name15" value="{/?orderData/Iwerk}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+								<Label text="{/?orderData/IwerkDesc}" wrapping="true" />
+							<Label text="Appointment start date" wrapping="true">
+								<layoutData>
+									<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Input id="name19" value="{/?orderData/Fsavz}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Label text="">
+								<layoutData>
+									<l:GridData span="L2 M2 S2"/>
+								</layoutData>
+							</Label>
+							<Label text="Priority">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name16" value="{/?orderData/Priok}" editable="false">
+								<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+							</Input>
+							<Label text="Appointment end date" wrapping="true">
+								<layoutData>
+									<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name18" value="{/?orderData/Fsedd}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Input id="name20" value="{/?orderData/Fsedz}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Label text="">
+								<layoutData>
+									<l:GridData span="L2 M2 S2"/>
+								</layoutData>
+							</Label>
+					
+							<Label text="Work Location">
+								<layoutData>
+									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name31" value="{/?orderData/Tplnr}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Label text="">
+								<layoutData>
+									<l:GridData span="L4 M4 S4"/>
+								</layoutData>
+							</Label>
+							<Label text="Opr. User Status" wrapping="true">
+									<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name30" value="{/?orderData/Asttx}" editable="false">
+								<layoutData>
+									<l:GridData span=" L2"/>
+								</layoutData>
+							</Input>
+							<Label text="Equipment">
+								<layoutData>
+									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name29" value="{/?orderData/Equnr}" editable="false">
+								<layoutData>
+									<l:GridData span=" L2 M2 S2"/>
+								</layoutData>
+							</Input>
+							<Label text="">
+								<layoutData>
+									<l:GridData span="L4 M4 S4"/>
+								</layoutData>
+							</Label>
+							<Label text="Work Center" wrapping="true">
+									<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name21" value="{/?orderData/Arbpl}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Label text="Location Address">
+								<layoutData>
+									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name22" value="{/?orderData/Street}" editable="false">
+								<layoutData>
+									<l:GridData span="L8 M8 S8"/>
+								</layoutData>
+							</Input>
+							<Label text="">
+								<layoutData>
+									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name23" value="{/?orderData/City1}" editable="false">
+								<layoutData>
+									<l:GridData span="L8 M8 S8"/>
+								</layoutData>
+							</Input>
+							<Label text="Country">
+								<layoutData>
+									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name24" value="{/?orderData/Country}" editable="false">
+								<layoutData>
+									<l:GridData span="XL1 L2 M4 S4"/>
+								</layoutData>
+							</Input>
+							<Label text="Region">
+								<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+							</Label>
+							<Input id="name25" value="{/?orderData/Region}" editable="false">
+								<layoutData>
+									<l:GridData span="L2 M2 S2"/>
+								</layoutData>
+							</Input>
+							<Label text="Zip/Pin">
+								<layoutData>
+									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name26" value="{/?orderData/PostCode}" editable="false">
+								<layoutData>
+									<l:GridData span="L3 M3 S3"/>
+								</layoutData>
+							</Input>
+						</l:content>
+					</l:Grid>
+				</IconTabFilter>
+				<IconTabFilter text="Personal No.">
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" columnsL="2" columnsM="2" labelSpanL="5" labelSpanM="8"
+							labelSpanS="6">
+							<f:content>
+								<core:Title text=""/>
+								<Label text="Order number"/>
+								<Input id="name" value="" editable="true">
+									<layoutData>
+										<l:GridData span="XL1 L2 M8 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Order operation text"/>
+								<Input id="name3" value="" editable="true">
+									<layoutData>
+										<l:GridData span="XL1 L2 M8 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Work Location"/>
+								<Input id="name4" value="" editable="true">
+									<layoutData>
+										<l:GridData span="XL1 L2 M8 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Equipment"/>
+								<Input id="name5" value="" editable="true">
+									<layoutData>
+										<l:GridData span="XL1 L2 M8 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Appointment start date"/>
+								<DatePicker id="DP1" valueFormat="dd-MM-yyyy" displayFormat="medium" change="handleChange" class="sapUiSmallMarginBottom">
+									<layoutData>
+										<l:GridData span="XL1 L2 M4 S4"/>
+									</layoutData>
+								</DatePicker>
+								<TimePicker id="TP1" value="" valueFormat="HH:mm" displayFormat="HH:mm" change="handleChange">
+									<layoutData>
+										<l:GridData span="XL1 L2 M4 S4"/>
+									</layoutData>
+								</TimePicker>
+								<Label text="Appointment end date"/>
+								<DatePicker id="DP2" valueFormat="dd-MM-yyyy" displayFormat="medium" change="handleChange" class="sapUiSmallMarginBottom">
+									<layoutData>
+										<l:GridData span="XL1 L2 M4 S4"/>
+									</layoutData>
+								</DatePicker>
+								<TimePicker id="TP2" value="" valueFormat="HH:mm" displayFormat="HH:mm" change="handleChange">
+									<layoutData>
+										<l:GridData span="XL1 L2 M4 S4"/>
+									</layoutData>
+								</TimePicker>
+								<Input value="">
+									<layoutData>
+										<l:GridData span="XL1 L2 M3 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Work location"/>
+								<Input value="">
+									<layoutData>
+										<l:GridData span="XL1 L2 M8 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Equipment"/>
+								<Input value="">
+									<layoutData>
+										<l:GridData span="XL1 L2 M8 S4"/>
+									</layoutData>
+								</Input>
+								<core:Title text=""/>
+								<!-- empty title so it looks like this container belongs to the left one -->
+								<Label text="Opration number"/>
+								<Input value="">
+									<layoutData>
+										<l:GridData span="XL1 L2 M3 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Order type"/>
+								<Input id="name1" value="" editable="true">
+									<layoutData>
+										<l:GridData span="XL1 L2 M3 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Plant"/>
+								<Input id="name2" value="" editable="true">
+									<layoutData>
+										<l:GridData span="XL1 L2 M3 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Priority"/>
+								<Input id="name7" value="" editable="true">
+									<layoutData>
+										<l:GridData span="XL1 L2 M3 S4"/>
+									</layoutData>
+								</Input>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+		<footer>
+			<Toolbar id="otbFooter">
+				<ToolbarSpacer/>
+				<Button text="Enroute" type="Emphasized"></Button>
+				<Button text="Onsite" type="Emphasized"></Button>
+				<Button text="In progress" type="Emphasized"></Button>
+				<Button text="Hold" type="Emphasized"></Button>
+				<Button text="Return" type="Emphasized"></Button>
+				<Button text="Forms" type="Emphasized"></Button>
+				<Button text="Complete" type="Emphasized" press="onPressComplete"></Button>
+			</Toolbar>
+			<!--<OverflowToolbar id="ftbFooter">-->
+			<!--	<ToolbarSpacer/>-->
+			<!--	<OverflowToolbarButton text="Enroute" type="Emphasized"/>-->
+			<!--	<OverflowToolbarButton text="Onsite" type="Emphasized"/>-->
+			<!--	<OverflowToolbarButton text="In progress" type="Emphasized"/>-->
+			<!--	<OverflowToolbarButton text="Hold" type="Emphasized"/>-->
+			<!--	<OverflowToolbarButton text="Return" type="Emphasized"/>-->
+			<!--	<OverflowToolbarButton text="Forms" type="Emphasized"/>-->
+			<!--	<OverflowToolbarButton text="Complete" type="Emphasized"/>-->
+			<!--</OverflowToolbar>-->
+		</footer>
+	</Page>
+</mvc:View>

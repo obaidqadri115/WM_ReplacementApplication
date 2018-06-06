@@ -1,0 +1,13 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZSplitApp_Screen.controller.Detail2"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+	<!--<Page title="Work Execution Completion Form" showNavButton="true" navButtonPress="onNavBack">-->
+	<Page title="Work Execution Fiori App- Time Submission" showNavButton="true" navButtonPress="onPress">
+		<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="Operation details"></IconTabFilter>
+				<IconTabFilter text="Timesheet Review"></IconTabFilter>
+				<IconTabFilter text="Personal Nos "></IconTabFilter>
+			</items>
+		</IconTabBar>
+	</Page>
+</mvc:View>

@@ -1,0 +1,53 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZSplitApp_Screen.controller.Master"
+	xmlns:html="http://www.w3.org/1999/xhtml"  >
+	<Page title="Task for Today">
+		<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="Work Order">
+					<List id="orders" items="{/results}" mode="SingleSelectMaster" selectionChange="onSelectionChange">
+						<items>
+							<StandardListItem title="{Aufnr}" info="Operation No-{Vornr}" type="Active" press="onSelectionChange"/>
+						</items>
+					</List>
+				</IconTabFilter>
+				<IconTabFilter text="Notification"></IconTabFilter>
+			</items>
+		</IconTabBar>
+		<!--<m:Page-->
+		<!--showHeader="false"-->
+		<!--enableScrolling="false"-->
+		<!--class="sapUiContentPadding">-->
+		<!--<m:content>-->
+		<!--<Table-->
+		<!--		rows=""-->
+		<!--		title="Products"-->
+		<!--		selectionMode="MultiToggle"-->
+		<!--		visibleRowCount="2">-->
+		<!--		<columns>-->
+		<!--			<Column width="11rem">-->
+		<!--				<m:Label text="Product Name" />-->
+		<!--				<template>-->
+		<!--					<m:Text text="{Name}" wrapping="false" />-->
+		<!--				</template>-->
+		<!--			</Column>-->
+		<!--			<Column width="11rem">-->
+		<!--				<m:Label text="Product Id" />-->
+		<!--				<template>-->
+		<!--					<m:Input value="{ProductId}"/>-->
+		<!--				</template>-->
+		<!--			</Column>-->
+		<!--			<Column width="6rem" hAlign="End">-->
+		<!--				<m:Label text="Quantity" />-->
+		<!--				<template>-->
+		<!--					<m:Label text="{Quantity}" />-->
+		<!--				</template>-->
+		<!--			</Column>-->
+						
+		<!--		</columns>-->
+		<!--	</Table>-->
+		<!--	</m:content>-->
+		<!--	</m:Page>-->
+				
+				
+	</Page>
+</mvc:View>
