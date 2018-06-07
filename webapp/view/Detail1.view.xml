@@ -1,75 +1,19 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZSplitApp_Screen.controller.Detail1"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
-	<Page title="Work Execution Fiori App" >
+	<Page title="Work Execution Fiori App">
 		<customHeader>
 			<Bar>
 				<contentLeft>
 					<Text text="Work Execution Fiori App "/>
 				</contentLeft>
 				<contentRight>
-					<Button press="onNavTo" text="Timesheet Review" type="Emphasized" ></Button>
+					<Button press="onNavTo" text="Timesheet Review" type="Emphasized"></Button>
 				</contentRight>
 			</Bar>
 		</customHeader>
 		<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
 			<items>
 				<IconTabFilter text="Oper.Details">
-					<!--<l:Grid defaultSpan="L12 M12 S12" width="auto" id="Form1">-->
-					<!--<l:content>-->
-					<!--	<f:Form id="FormChange354" editable="true">-->
-					<!--		<f:layout>-->
-					<!--			<f:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1"/>-->
-					<!--		</f:layout>-->
-					<!--		<f:formContainers>-->
-					<!--			<f:FormContainer>-->
-					<!--				<f:formElements>-->
-					<!--					<f:FormElement label="Order number">-->
-					<!--						<f:fields>-->
-					<!--							<Input></Input>-->
-					<!--						</f:fields>-->
-					<!--</f:FormElement>-->
-					<!--<f:FormElement label="Operation No" class="fontColor">-->
-					<!--	<f:fields>-->
-					<!--		<Input></Input>-->
-					<!--	</f:fields>-->
-					<!--</f:FormElement>-->
-					<!--<f:FormElement label="Order type" class="fontColor">-->
-					<!--	<f:fields>-->
-					<!--		<Input></Input>-->
-					<!--	</f:fields>-->
-					<!--</f:FormElement>-->
-					<!--<f:FormElement label="Order operation text" class="fontColor">-->
-					<!--	<f:fields>-->
-					<!--		<Input></Input>-->
-					<!--	</f:fields>-->
-					<!--</f:FormElement>-->
-					<!--<f:FormElement label="Plant" class="fontColor">-->
-					<!--	<f:fields>-->
-					<!--		<Input></Input>-->
-					<!--	</f:fields>-->
-					<!--</f:FormElement>-->
-					<!--<f:FormElement label="Appointment start date" class="fontColor">-->
-					<!--	<layoutData>-->
-					<!--		<l:GridData span="L3 M3 S3" linebreakL="true" linebreakM="true" linebreakS="true"/>-->
-					<!--	</layoutData>-->
-					<!--	<f:fields>-->
-					<!--			<DatePicker id="DP3" valueFormat="dd-MM-yyyy" displayFormat="medium" change="handleChange" class="sapUiSmallMarginBottom">-->
-					<!--				<layoutData>-->
-					<!--					<l:GridData span="L2 M4 S4"/>-->
-					<!--				</layoutData>-->
-					<!--			</DatePicker>-->
-					<!--			<TimePicker id="TP3" value="" valueFormat="HH:mm" displayFormat="HH:mm" change="handleChange">-->
-					<!--				<layoutData>-->
-					<!--					<l:GridData span="XL1 L2 M4 S4"/>-->
-					<!--				</layoutData>-->
-					<!--			</TimePicker>-->
-					<!--	</f:fields>-->
-					<!--</f:FormElement>-->
-					<!--				</f:formElements>-->
-					<!--			</f:FormContainer>-->
-					<!--		</f:formContainers>-->
-					<!--	</f:Form>-->
-					<!--</l:content>-->
 					<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
 						<l:content>
 							<Label text="Order number"/>
@@ -88,7 +32,7 @@
 								<layoutData>
 									<l:GridData span="L1 M1 S1"/>
 								</layoutData>
-								</Label>
+							</Label>
 							<Input id="name13" value="{/?orderData/Auart}" editable="false">
 								<layoutData>
 									<l:GridData span="L1"/>
@@ -99,28 +43,28 @@
 								<layoutData>
 									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
 								</layoutData>
-								</Label>
+							</Label>
 							<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
 								<layoutData>
 									<l:GridData span="L5 M5 S5"/>
 								</layoutData>
 							</Input>
 							<Label text="">
-							<layoutData>
+								<layoutData>
 									<l:GridData span="L1"/>
 								</layoutData>
-								</Label>
+							</Label>
 							<Label text="Plant">
-							<layoutData>
+								<layoutData>
 									<l:GridData span="L1 M1 S1"/>
 								</layoutData>
-								</Label>
+							</Label>
 							<Input id="name15" value="{/?orderData/Iwerk}" editable="false">
 								<layoutData>
 									<l:GridData span="L1"/>
 								</layoutData>
 							</Input>
-								<Label text="{/?orderData/IwerkDesc}" wrapping="true" />
+							<Label text="{/?orderData/IwerkDesc}" wrapping="true"/>
 							<Label text="Appointment start date" wrapping="true">
 								<layoutData>
 									<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
@@ -171,7 +115,6 @@
 									<l:GridData span="L2 M2 S2"/>
 								</layoutData>
 							</Label>
-					
 							<Label text="Work Location">
 								<layoutData>
 									<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
@@ -188,7 +131,7 @@
 								</layoutData>
 							</Label>
 							<Label text="Opr. User Status" wrapping="true">
-									<layoutData>
+								<layoutData>
 									<l:GridData span="L1"/>
 								</layoutData>
 							</Label>
@@ -213,7 +156,7 @@
 								</layoutData>
 							</Label>
 							<Label text="Work Center" wrapping="true">
-									<layoutData>
+								<layoutData>
 									<l:GridData span="L1"/>
 								</layoutData>
 							</Label>
@@ -345,7 +288,6 @@
 									</layoutData>
 								</Input>
 								<core:Title text=""/>
-								<!-- empty title so it looks like this container belongs to the left one -->
 								<Label text="Opration number"/>
 								<Input value="">
 									<layoutData>
@@ -379,7 +321,7 @@
 		<footer>
 			<Toolbar id="otbFooter">
 				<ToolbarSpacer/>
-				<Button text="Enroute" type="Emphasized"></Button>
+				<Button text="Enroute" type="Emphasized" press="onClick"></Button>
 				<Button text="Onsite" type="Emphasized"></Button>
 				<Button text="In progress" type="Emphasized"></Button>
 				<Button text="Hold" type="Emphasized"></Button>
@@ -387,16 +329,6 @@
 				<Button text="Forms" type="Emphasized"></Button>
 				<Button text="Complete" type="Emphasized" press="onPressComplete"></Button>
 			</Toolbar>
-			<!--<OverflowToolbar id="ftbFooter">-->
-			<!--	<ToolbarSpacer/>-->
-			<!--	<OverflowToolbarButton text="Enroute" type="Emphasized"/>-->
-			<!--	<OverflowToolbarButton text="Onsite" type="Emphasized"/>-->
-			<!--	<OverflowToolbarButton text="In progress" type="Emphasized"/>-->
-			<!--	<OverflowToolbarButton text="Hold" type="Emphasized"/>-->
-			<!--	<OverflowToolbarButton text="Return" type="Emphasized"/>-->
-			<!--	<OverflowToolbarButton text="Forms" type="Emphasized"/>-->
-			<!--	<OverflowToolbarButton text="Complete" type="Emphasized"/>-->
-			<!--</OverflowToolbar>-->
 		</footer>
 	</Page>
 </mvc:View>

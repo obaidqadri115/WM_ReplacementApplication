@@ -12,12 +12,8 @@ sap.ui.define([
 			this.getOwnerComponent().getAggregation("rootControl").byId("splitapp");
 		},
 		_onRouteMatched: function(oEvent) {
-			// var orderId = oEvent.getParameter("arguments").orderId;
-			// // var productId = oEvent.getParameter("arguments").productId;
-			// this.getView().bindElement("/orders/" + orderId);
 
 			var detailData = oEvent.getParameter("arguments");
-			// var productId = oEvent.getParameter("arguments").productId;
 			var model = new sap.ui.model.json.JSONModel(detailData);
 			this.getView().setModel(model);
 		},
@@ -29,6 +25,28 @@ sap.ui.define([
 		onNavTo: function(oEvent) {
 
 			this.getOwnerComponent().getRouter().navTo("completionForm");
+
+		},
+			onClick: function() {
+			var orderNo = this.getView().byId("name11").getValue();
+			var operationNo = this.getView().byId("name12").getValue();
+			var orderSts = "ENRT";
+
+			var oModel = new sap.ui.model.odata.v2.ODataModel("/sap/opu/odata/SAP/ZEAM_WM_FIORI_APP_SRV/", true, "", "");
+			var oEntry = {};
+			oEntry.Aufnr = orderNo;
+			oEntry.Vornr = operationNo;
+			oEntry.Status = orderSts;
+
+			oModel.create("/OpUserStatusSet", oEntry, {
+				method: "POST",
+				success: function(data) {
+					alert(JSON.stringify(data));
+				},
+				error: function() {
+
+				}
+			});
 
 		}
 		
